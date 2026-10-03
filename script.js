@@ -384,7 +384,7 @@ function startGameLoop() {
 }
 
 function resetJumpGameState() {
-  player = { x: 40, y: 200, w: 50, h: 50, dy: 0, gravity: 0.6, jumpPower: -13, grounded: true };
+  player = { x: 40, y: 200, w: 50, h: 50, dy: 0, gravity: 0.9, jumpPower: -16, grounded: true };
   obstacles = [];
   frames = 0;
   score = 0;
@@ -433,13 +433,13 @@ function animateJumpGame() {
     ctx.fillRect(player.x, player.y, player.w, player.h);
   }
 
-  if (frames % 140 === 0) {
+  if (frames % 90 === 0) {
     obstacles.push({ x: canvas.width, y: canvas.height - 55, w: 35, h: 40, passed: false });
   }
 
   for (let i = 0; i < obstacles.length; i++) {
     let obs = obstacles[i];
-    obs.x -= 2.5;
+    obs.x -= 4.5;
 
     ctx.font = "40px Arial";
     ctx.fillText("🌲", obs.x - 5, obs.y + 35);
