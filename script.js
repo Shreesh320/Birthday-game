@@ -439,7 +439,7 @@ function animateJumpGame() {
 
   for (let i = 0; i < obstacles.length; i++) {
     let obs = obstacles[i];
-    obs.x -= 4.5;
+    obs.x -= 4;
 
     ctx.font = "40px Arial";
     ctx.fillText("🌲", obs.x - 5, obs.y + 35);
