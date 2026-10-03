@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Aditi's Birthday Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Entry Screen -->
+  <div id="entry-screen" class="stage">
+    <h1>Challenge for the one who loves being challenged!</h1>
+    <p>Turn your volume up! 🔊</p>
+    <button id="begin-btn" class="action-btn" style="padding: 15px 30px; font-size: 1.2rem;">Tap to Begin ❤️</button>
+  </div>
+
+  <!-- Level 1: The Quiz Stage -->
+  <div id="quiz-stage" class="stage hidden">
+    <h1>Level 1: The Warm Up</h1>
+    <p>Answer correctly to prove it's really you.</p>
+    <div id="question-container">
+      <h2 id="question-text">Question goes here?</h2>
+      <div id="options-container">
+        <!-- Buttons injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Level 2: Ghost Stage -->
+  <div id="ghost-stage" class="stage hidden">
+    <h1>Level 2: Ghost Mode 👻</h1>
+    <p>Find the real youuu! The others are illusions.</p>
+    <div id="ghost-buttons-container">
+      <!-- Dynamic Buttons injected by JS -->
+    </div>
+  </div>
+
+  <!-- Level 3: The Jump Game -->
+  <div id="jump-stage" class="stage hidden">
+    <h1>Level 3: Run for your Life!</h1>
+    <div id="game-hud">
+      <span id="lives-display">❤️❤️❤️</span>
+      <span id="score-display">Trees: 0/10</span>
+    </div>
+
+    <!-- Canvas Wrapper with Start Overlay -->
+    <div style="position: relative; display: inline-block;">
+      <canvas id="game-canvas"></canvas>
+      <div id="jump-start-overlay">
+        <p style="font-weight: 600; color: #333; margin-bottom: 12px;">Ready to run through the forest?</p>
+        <button id="start-jump-btn" class="action-btn" style="padding: 14px 28px; font-size: 1.1rem;">Start Running! 🏃‍♀️</button>
+      </div>
+    </div>
+    <button id="jump-btn">JUMP!</button>
+  </div>
+
+  <!-- Reward Screen -->
+  <div id="reward-screen" class="hidden card">
+    <h1 id="reward-title">🎉 Level Cleared! 🎉</h1>
+    <div class="message"><p id="reward-text">Message goes here</p></div>
+    <button id="next-level-btn" class="action-btn">Next Level ➡️</button>
+  </div>
+
+  <!-- Grand Finale Screen -->
+  <div id="final-screen" class="hidden card">
+    <h1>💖 Happy Birthday, Aditi! 💖</h1>
+    <div class="message">
+      <p>You survived the forest and made it to the world! You officially earned this.</p>
+      <br/>
+      <p><i>(Write your long, heartfelt birthday message here!)</i></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
